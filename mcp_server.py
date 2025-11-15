@@ -11,7 +11,7 @@ server = FastMCP("Stock MCP Server")
 API_URL = "https://www.alphavantage.co/query"
 #API_KEY = os.getenv("ALPHAVANTAGE_API_KEY", "demo")
 #API_KEY=st.secrets["ALPHAVANTAGE_API_KEY"]
-API_KEY = os.getenv("ALPHAVANTAGE_API_KEY") or st.secrets.get("ALPHAVANTAGE_API_KEY")
+API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
 
 @server.tool()
 def get_stock_quote(symbol: str) -> dict:
